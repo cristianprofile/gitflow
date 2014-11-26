@@ -1,10 +1,15 @@
-gitflow
+GITFLOW TESTING PROJECT
 =======
 
-Testing git flow commands to order branches flow
+Testing git flow commands to order branches flow, with several branches using labels to
+mark several release version on master's branch.
 
 
-Here you have gitflow commands to use this workflow in a Git Repositoy
+
+
+
+
+Gitflow commands to use this workflow in a Git Repository and equivalent git command launched. 
 
 
 ## Initialize
