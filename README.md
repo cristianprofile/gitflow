@@ -7,7 +7,8 @@ mark several release version on master's branch.
 
 
 
-
+GITFLOW COMMANDS AND EQUIVALENT GIT COMMAND
+=======
 
 Gitflow commands to use this workflow in a Git Repository and equivalent git command launched. 
 
