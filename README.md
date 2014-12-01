@@ -5,6 +5,7 @@ Testing git flow commands to order branches flow, with several branches using la
 mark several release version on master's branch.
 
 See:  https://github.com/nvie/gitflow/wiki/Command-Line-Arguments
+      http://blogs.endjin.com/2013/04/a-step-by-step-guide-to-using-gitflow-with-teamcity-part-3-gitflow-commands/
 
 
 GITFLOW COMMANDS AND EQUIVALENT GIT COMMAND
@@ -93,9 +94,11 @@ gitflow | git
  | `git push origin release/1.2.0`
 
 
-###git flow release track <name>
+###Start tracking release
 
 Start tracking release <name> that is shared on $ORIGIN
+
+git flow release track <name>
 
 
 ### Get latest for a release branch
