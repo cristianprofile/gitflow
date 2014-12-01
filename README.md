@@ -4,7 +4,7 @@ GITFLOW TESTING PROJECT
 Testing git flow commands to order branches flow, with several branches using labels to
 mark several release version on master's branch.
 
-
+See:  https://github.com/nvie/gitflow/wiki/Command-Line-Arguments
 
 
 GITFLOW COMMANDS AND EQUIVALENT GIT COMMAND
@@ -44,6 +44,11 @@ gitflow | git
 --------|-----
 `git flow feature publish MYFEATURE` | `git checkout feature/MYFEATURE`
  | `git push origin feature/MYFEATURE`
+
+
+### get a branch created  shared remote repository
+
+git flow feature track <name>
 
 
 ### Get latest for a feature branch
@@ -86,6 +91,11 @@ gitflow | git
 --------|-----
 `git flow release publish 1.2.0` | `git checkout release/1.2.0`
  | `git push origin release/1.2.0`
+
+
+###git flow release track <name>
+
+Start tracking release <name> that is shared on $ORIGIN
 
 
 ### Get latest for a release branch
