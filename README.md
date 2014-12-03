@@ -45,6 +45,8 @@ gitflow | git
 --------|-----
 `git flow feature publish MYFEATURE` | `git checkout feature/MYFEATURE`
  | `git push origin feature/MYFEATURE`
+ 
+ Once you’ve published the feature your team mates will be able to work on the feature branch with you by cloning the Repository from the centralized Repository and then doing a “git flow init”.  This will set them up to have a Gitflow enabled local Repository with a master and a develop branch.  Once they have a Gitflow enabled Repository they should be in the develop branch on which they should now do a pull to ensure their local Repository is in sync with the one on the remote.  Once this is complete they should be able to follow it.
 
 
 ### get a branch created  shared remote repository
