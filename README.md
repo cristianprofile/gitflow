@@ -117,6 +117,8 @@ gitflow | git
 --------|-----
 _N/A_ | `git checkout release/1.2.0`
  | `git pull --rebase origin release/1.2.0`
+ 
+ (note that there is not any command to pull like on feature's branch)
 
 ### Push for a release branch (remote repository)
  
