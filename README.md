@@ -61,14 +61,12 @@ gitflow | git
 `git flow feature pull origin MYFEATURE` | `git checkout feature/MYFEATURE`
  | `git pull --rebase origin feature/MYFEATURE`
  
- 
  ### Push for a feature branch remote repository
-
+ 
 gitflow | git
 --------|-----
 --- | `git checkout feature/myfeature (only if you are out of feature branch)`
  | `git push`
-
 
 
 ### Finalize a feature branch
