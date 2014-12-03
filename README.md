@@ -51,7 +51,7 @@ Once you’ve published the feature your team mates will be able to work on the 
 
 ### Get a branch created  shared remote repository
 
-git flow feature track <name>
+git flow feature track myfeature
 
 
 ### Get latest for a feature branch remote repository
@@ -108,7 +108,7 @@ gitflow | git
 
 Start tracking release <name> that is shared on $ORIGIN
 
-git flow release track <name>
+git flow release track 1.2.0
 
 
 ### Get latest for a release branch
