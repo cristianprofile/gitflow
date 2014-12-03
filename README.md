@@ -46,7 +46,7 @@ gitflow | git
 `git flow feature publish MYFEATURE` | `git checkout feature/MYFEATURE`
  | `git push origin feature/MYFEATURE`
  
- Once you’ve published the feature your team mates will be able to work on the feature branch with you by cloning the Repository from the centralized Repository and then doing a “git flow init”.  This will set them up to have a Gitflow enabled local Repository with a master and a develop branch.  Once they have a Gitflow enabled Repository they should be in the develop branch on which they should now do a pull to ensure their local Repository is in sync with the one on the remote.  Once this is complete they should be able to follow it.
+Once you’ve published the feature your team mates will be able to work on the feature branch with you by cloning the Repository from the centralized Repository and then doing a “git flow init”.  This will set them up to have a Gitflow enabled local Repository with a master and a develop branch.  Once they have a Gitflow enabled Repository they should be in the develop branch on which they should now do a pull to ensure their local Repository is in sync with the one on the remote.  Once this is complete they should be able to follow it.
 
 
 ### get a branch created  shared remote repository
@@ -54,12 +54,19 @@ gitflow | git
 git flow feature track <name>
 
 
-### Get latest for a feature branch
+### Get latest for a feature branch remote repository
 
 gitflow | git
 --------|-----
 `git flow feature pull origin MYFEATURE` | `git checkout feature/MYFEATURE`
  | `git pull --rebase origin feature/MYFEATURE`
+ 
+ 
+ ### Push for a feature branch remote repository
+(Note: without gitflow command, )
+
+ git checkout feature/myfeature (only if you are out of feature branch)
+ git push
 
 
 ### Finalize a feature branch
@@ -109,6 +116,12 @@ gitflow | git
 --------|-----
 _N/A_ | `git checkout release/1.2.0`
  | `git pull --rebase origin release/1.2.0`
+
+ ### Push for a feature branch remote repository
+(Note: without gitflow command, )
+
+ git checkout release/myrelease (only if you are out of relase branch)
+ git push
 
 
 ### Finalize a release branch
