@@ -61,11 +61,12 @@ gitflow | git
 `git flow feature pull origin MYFEATURE` | `git checkout feature/MYFEATURE`
  | `git pull --rebase origin feature/MYFEATURE`
  
- ### Push for a feature branch remote repository
+ 
+### Push for a feature branch remote repository
  
 gitflow | git
 --------|-----
---- | `git checkout feature/myfeature (only if you are out of feature branch)`
+N/A | `git checkout feature/myfeature (only if you are out of feature branch)`
  | `git push`
 
 
@@ -117,11 +118,12 @@ gitflow | git
 _N/A_ | `git checkout release/1.2.0`
  | `git pull --rebase origin release/1.2.0`
 
- ### Push for a feature branch remote repository
-(Note: without gitflow command, )
-
- git checkout release/myrelease (only if you are out of relase branch)
- git push
+### Push for a release branch (remote repository)
+ 
+gitflow | git
+--------|-----
+N/A | `git checkout release/myrelease (only if you are out of feature branch)`
+ | `git push`
 
 
 ### Finalize a release branch
