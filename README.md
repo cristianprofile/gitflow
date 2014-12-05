@@ -51,7 +51,7 @@ Once you’ve published the feature your team mates will be able to work on the 
 
 ### Get a branch created  shared remote repository
 
-git flow feature track myfeature
+git flow feature track MYFEATURE
 
 
 ### Get latest for a feature branch remote repository
@@ -59,7 +59,7 @@ git flow feature track myfeature
 gitflow | git
 --------|-----
 `git flow feature pull origin MYFEATURE` | `git checkout feature/MYFEATURE`
- | `git pull --rebase origin feature/MYFEATURE`
+ | `git pull --rebase origin feature/MYFEATURE (try only git pull --rebase)`
  
  
 ### Push for a feature branch remote repository
