@@ -59,7 +59,7 @@ git flow feature track MYFEATURE
 gitflow | git
 --------|-----
 `git flow feature pull origin MYFEATURE` | `git checkout feature/MYFEATURE`
- | `git pull --rebase origin feature/MYFEATURE (try only git pull --rebase)`
+ | `git pull --rebase origin feature/MYFEATURE (try only git pull --rebase) (remember when a pull is fired commands: fetch + merge)`
  
  
 ### Push for a feature branch remote repository
