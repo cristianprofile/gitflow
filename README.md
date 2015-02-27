@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 GITFLOW TESTING PROJECT
 =======
 
@@ -192,7 +193,12 @@ _N/A_ | `git push origin master`
 =======
 gitflowS
 =======
-ASDADASDADAD
+gsdasdaditflowS
+>>>>>>> release/1.2
+=======
+SDASDASDSADADAD
+ASDADAD
+R23424
 Testing git flow commands to order branches flowA
 NUEVOS CAMBIOS
 msdadadasd 
