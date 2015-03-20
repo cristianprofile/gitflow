@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Gitflow by cristianprofile</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Gitflow</h1>
+          <h2>Testing git flow commands to order branches flow</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/cristianprofile/gitflow/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/cristianprofile/gitflow/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/cristianprofile/gitflow" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>Important!!!!!
+Format of any commit message in a git project
+<a href="https://github.com/erlang/otp/wiki/Writing-good-commit-messages">https://github.com/erlang/otp/wiki/Writing-good-commit-messages</a></p>
+
+<p>Example commit template message</p>
+
+<p>Short (50 chars or less) summary of changes</p>
+
+<p>More detailed explanatory text, if necessary.  Wrap it to about 72
+characters or so.  In some contexts, the first line is treated as the
+subject of an email and the rest of the text as the body.  The blank
+line separating the summary from the body is critical (unless you omit
+the body entirely); tools like rebase can get confused if you run the
+two together.</p>
+
+<p>Further paragraphs come after blank lines.</p>
+
+<ul>
+<li><p>Bullet points are okay, too</p></li>
+<li><p>Typically a hyphen or asterisk is used for the bullet, preceded by a
+single space, with blank lines in between, but conventions vary here</p></li>
+</ul>
+
+<p>Close #4 (only if we want this commit close an issue when you merge this commit to your master branch)</p>
+
+<h1>
+<a id="gitflow-testing-project" class="anchor" href="#gitflow-testing-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>GITFLOW TESTING PROJECT</h1>
+
+<p>Testing git flow commands to order branches flow, with several branches using labels to
+mark several release version on master's branch.</p>
+
+<p>See:  <a href="https://github.com/nvie/gitflow/wiki/Command-Line-Arguments">https://github.com/nvie/gitflow/wiki/Command-Line-Arguments</a>
+      <a href="http://blogs.endjin.com/2013/04/a-step-by-step-guide-to-using-gitflow-with-teamcity-part-3-gitflow-commands/">http://blogs.endjin.com/2013/04/a-step-by-step-guide-to-using-gitflow-with-teamcity-part-3-gitflow-commands/</a></p>
+
+<h1>
+<a id="gitflow-commands-and-equivalent-git-command" class="anchor" href="#gitflow-commands-and-equivalent-git-command" aria-hidden="true"><span class="octicon octicon-link"></span></a>GITFLOW COMMANDS AND EQUIVALENT GIT COMMAND</h1>
+
+<p>Gitflow commands to use this workflow in a Git Repository and equivalent git command launched. </p>
+
+<h2>
+<a id="initialize" class="anchor" href="#initialize" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initialize</h2>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow init</code></td>
+<td><code>git init</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git commit --allow-empty -m "Initial commit"</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git checkout -b develop master</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="connect-to-the-remote-repository" class="anchor" href="#connect-to-the-remote-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Connect to the remote repository</h2>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>N/A</em></td>
+<td><code>git remote add origin git@github.com:MYACCOUNT/MYREPO</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<h3>
+<a id="create-a-feature-branch" class="anchor" href="#create-a-feature-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a feature branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow feature start MYFEATURE</code></td>
+<td><code>git checkout -b feature/MYFEATURE develop</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="share-a-feature-branch" class="anchor" href="#share-a-feature-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Share a feature branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow feature publish MYFEATURE</code></td>
+<td><code>git checkout feature/MYFEATURE</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git push origin feature/MYFEATURE</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>Once you’ve published the feature your team mates will be able to work on the feature branch with you by cloning the Repository from the centralized Repository and then doing a “git flow init”.  This will set them up to have a Gitflow enabled local Repository with a master and a develop branch.  Once they have a Gitflow enabled Repository they should be in the develop branch on which they should now do a pull to ensure their local Repository is in sync with the one on the remote.  Once this is complete they should be able to follow it.</p>
+
+<h3>
+<a id="get-a-branch-created--shared-remote-repository" class="anchor" href="#get-a-branch-created--shared-remote-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get a branch created  shared remote repository</h3>
+
+<p>git flow feature track MYFEATURE</p>
+
+<h3>
+<a id="get-latest-for-a-feature-branch-remote-repository" class="anchor" href="#get-latest-for-a-feature-branch-remote-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get latest for a feature branch remote repository</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow feature pull origin MYFEATURE</code></td>
+<td><code>git checkout feature/MYFEATURE</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git pull --rebase origin feature/MYFEATURE (try only git pull --rebase) (remember when a pull is fired commands: fetch + merge)</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="push-for-a-feature-branch-remote-repository" class="anchor" href="#push-for-a-feature-branch-remote-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Push for a feature branch remote repository</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td><code>git checkout feature/myfeature (only if you are out of feature branch)</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git push</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="finalize-a-feature-branch" class="anchor" href="#finalize-a-feature-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Finalize a feature branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow feature finish MYFEATURE</code></td>
+<td><code>git checkout develop</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git merge --no-ff feature/MYFEATURE</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git branch -d feature/MYFEATURE</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="push-the-merged-feature-branch" class="anchor" href="#push-the-merged-feature-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Push the merged feature branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>N/A</em></td>
+<td><code>git push origin develop</code></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<code>git push origin :feature/MYFEATURE</code> <em>(if pushed)</em>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="releases" class="anchor" href="#releases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Releases</h2>
+
+<h3>
+<a id="create-a-release-branch" class="anchor" href="#create-a-release-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a release branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow release start 1.2.0</code></td>
+<td><code>git checkout -b release/1.2.0 develop</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="share-a-release-branch" class="anchor" href="#share-a-release-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Share a release branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow release publish 1.2.0</code></td>
+<td><code>git checkout release/1.2.0</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git push origin release/1.2.0</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="start-tracking-release" class="anchor" href="#start-tracking-release" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start tracking release</h3>
+
+<p>Start tracking release  that is shared on $ORIGIN</p>
+
+<p>git flow release track 1.2.0</p>
+
+<h3>
+<a id="get-latest-for-a-release-branch" class="anchor" href="#get-latest-for-a-release-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get latest for a release branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>N/A</em></td>
+<td><code>git checkout release/1.2.0</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git pull --rebase origin release/1.2.0</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>(note that there is not any command to pull like on feature's branch)</p>
+
+<h3>
+<a id="push-for-a-release-branch-remote-repository" class="anchor" href="#push-for-a-release-branch-remote-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Push for a release branch (remote repository)</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td><code>git checkout release/myrelease (only if you are out of feature branch)</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git push</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="finalize-a-release-branch" class="anchor" href="#finalize-a-release-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Finalize a release branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow release finish 1.2.0</code></td>
+<td><code>git checkout master</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git merge --no-ff release/1.2.0</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git tag -a 1.2.0</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git checkout develop</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git merge --no-ff release/1.2.0</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git branch -d release/1.2.0</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="push-the-merged-feature-branch-1" class="anchor" href="#push-the-merged-feature-branch-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Push the merged feature branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>N/A</em></td>
+<td><code>git push origin master</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git push origin develop</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git push origin --tags</code></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<code>git push origin :release/1.2.0</code> <em>(if pushed)</em>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="hotfixes" class="anchor" href="#hotfixes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hotfixes</h2>
+
+<h3>
+<a id="create-a-hotfix-branch" class="anchor" href="#create-a-hotfix-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a hotfix branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow hotfix start 1.2.1 [commit]</code></td>
+<td><code>git checkout -b hotfix/1.2.1 [commit]</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="finalize-a-hotfix-branch" class="anchor" href="#finalize-a-hotfix-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Finalize a hotfix branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git flow hotfix finish 1.2.1</code></td>
+<td><code>git checkout master</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git merge --no-ff hotfix/1.2.1</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git tag -a 1.2.1</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git checkout develop</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git merge --no-ff hotfix/1.2.1</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git branch -d hotfix/1.2.1</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="push-the-merged-hotfix-branch" class="anchor" href="#push-the-merged-hotfix-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Push the merged hotfix branch</h3>
+
+<table>
+<thead>
+<tr>
+<th>gitflow</th>
+<th>git</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>N/A</em></td>
+<td><code>git push origin master</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git push origin develop</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>git push origin --tags</code></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<code>git push origin :hotfix/1.2.1</code> <em>(if pushed)</em>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+
+<ul>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</a></li>
+<li><a href="https://help.github.com/articles/using-pull-requests#shared-repository-model">https://help.github.com/articles/using-pull-requests#shared-repository-model</a></li>
+<li>Personal experience</li>
+</ul>
+        </section>
+
+        <footer>
+          Gitflow is maintained by <a href="https://github.com/cristianprofile">cristianprofile</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
