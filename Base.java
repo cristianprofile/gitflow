@@ -1,4 +1,4 @@
-psdadsasackage com.mylab.cromero.domain;
+psdadsasackage com.mylab.cromero.domain;DADADASDADAD
 sdasdadsasdadasdsasdasdadasd
 import java.util.HashSet;
 import java.util.Set;
