@@ -2,7 +2,7 @@ psdadsasackage com.mylab.cromero.domain;DADADASDADAD
 sdasdadsasdadasdsasdasdadasd
 import java.util.HashSet;
 import java.util.Set;
-
+dsasdadad
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
