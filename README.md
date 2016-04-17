@@ -210,6 +210,7 @@ _N/A_ | `git push origin master`
  | `git push origin :hotfix/1.2.1` _(if pushed)_
 
 
+### Change initial configuration of Gitflow
 
 If you want to remap branch names in gitflow you have to do it via Git’s configuration file.
 
