@@ -2,6 +2,10 @@ Important!!!!!
 Format of any commit message in a git project
 https://github.com/erlang/otp/wiki/Writing-good-commit-messages
 
+
+
+
+
 Example commit template message
 
 Short (50 chars or less) summary of changes
@@ -204,6 +208,18 @@ _N/A_ | `git push origin master`
  | `git push origin develop`
  | `git push origin --tags`
  | `git push origin :hotfix/1.2.1` _(if pushed)_
+
+
+
+If you want to remap branch names in gitflow you have to do it via Git’s configuration file.
+
+The config file is located in the .git folder of your repository:
+
+/.git/config
+
+Information about submodules and branches is saved to this file. And gitflow also creates a few entries.
+
+
 
 
 
